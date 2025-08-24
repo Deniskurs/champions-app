@@ -1,0 +1,12 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="avatar-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bea0dc"/>
+      <stop offset="100%" stop-color="#aa78d2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="50" fill="url(#avatar-grad-2)"/>
+  <circle cx="50" cy="35" r="15" fill="white" opacity="0.8"/>
+  <ellipse cx="50" cy="70" rx="20" ry="12" fill="white" opacity="0.8"/>
+  <text x="50" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">2</text>
+</svg>

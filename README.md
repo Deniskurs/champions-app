@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Champions Program - Next.js Landing Page
 
-## Getting Started
+A modern, responsive landing page built with Next.js 14, TypeScript, and Tailwind CSS. Converted from a complex HTML design into a clean, maintainable React application.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 14** with App Router and TypeScript
+- **Tailwind CSS v4** with custom design tokens
+- **shadcn/ui** components for consistent UI
+- **Framer Motion** for smooth animations
+- **Embla Carousel** for image sliders
+- **Inter + Playfair Display** fonts via `next/font`
+- Fully responsive design
+- Accessibility-focused
+- SEO optimized
+
+## 🏗️ Architecture
+
+### Core Components (`src/components/core/`)
+- `Container.tsx` - Responsive container wrapper
+- `Section.tsx` - Standardized section layout
+- `CTA.tsx` - Call-to-action button component
+- `Logo.tsx` - Brand logo component
+
+### Block Components (`src/components/blocks/`)
+- `Nav.tsx` - Navigation with mobile menu
+- `Hero.tsx` - Hero section with video poster
+- `Offers.tsx` - Programs and pricing sections
+- `ProofWall.tsx` - Testimonials carousel
+- `FAQ.tsx` - Accordion FAQ section
+- `Apply.tsx` - Final CTA form
+- `Footer.tsx` - Site footer
+
+### Design System
+- Custom color palette (crimson accent, gold secondary)
+- Typography scale optimized for readability
+- Consistent spacing and border radius
+- Dark mode support
+- Focus-visible styles for accessibility
+
+## 🎨 Design Tokens
+
+```css
+:root {
+  --bg: 0 0% 100%;
+  --text: 0 0% 4%;
+  --accent: 350 84% 42%; /* Crimson */
+  --accent-2: 45 100% 50%; /* Gold */
+  --muted: 0 0% 40%;
+  --card: 0 0% 98%;
+  --border: 0 0% 86%;
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Start production server:**
+   ```bash
+   npm start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with fonts
+│   ├── page.tsx           # Main page composition
+│   └── globals.css        # Global styles & design tokens
+├── components/
+│   ├── core/              # Reusable core components
+│   ├── blocks/            # Page section components
+│   └── ui/                # shadcn/ui components
+├── lib/
+│   ├── data.ts            # Content data & types
+│   └── utils.ts           # Utility functions
+└── public/
+    └── images/            # Placeholder images (SVG)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Key Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### From Original HTML:
+- ❌ Removed external dependencies (GSAP, Swiper, Webflow CSS)
+- ❌ Replaced copyrighted content with placeholders
+- ❌ Removed inline styles and complex CSS
+
+### To Clean React:
+- ✅ Component-based architecture
+- ✅ TypeScript for type safety
+- ✅ Tailwind utilities for styling
+- ✅ Framer Motion for animations
+- ✅ Embla for carousels
+- ✅ Next.js optimization features
+
+## 🌐 Deployment
+
+The application is ready for deployment on platforms like:
+- Vercel (recommended for Next.js)
+- Netlify
+- Railway
+- Any platform supporting Node.js
+
+## 📝 Content Management
+
+All content is managed through `src/lib/data.ts`:
+- Hero section content
+- Program/course data
+- Testimonials
+- FAQ items
+- Pricing information
+
+Update the data file to modify site content without touching components.
+
+## 🎨 Customization
+
+1. **Colors**: Update CSS variables in `globals.css`
+2. **Typography**: Modify font imports in `layout.tsx`
+3. **Content**: Edit `lib/data.ts`
+4. **Components**: Extend or modify components in `components/`
+
+## 🔧 Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Components**: shadcn/ui (Radix)
+- **Animations**: Framer Motion
+- **Carousel**: Embla Carousel
+- **Icons**: Lucide React
+- **Fonts**: next/font/google
+
+Built following modern React and Next.js best practices with accessibility and performance in mind.
