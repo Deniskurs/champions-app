@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import { Work_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { UrgencyBanner } from "@/components/core/UrgencyBanner";
+import { LenisProvider } from "@/components/core/LenisProvider";
 
 const workSans = Work_Sans({
-  variable: "--font-sans",
+  variable: "--font-work-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 const playfairDisplay = Playfair_Display({
-  variable: "--font-serif", 
+  variable: "--font-playfair", 
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
@@ -62,17 +63,21 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#dc2626" />
+        <meta name="theme-color" content="#000000" />
       </head>
-      <body className="antialiased font-sans">
-        <UrgencyBanner 
-          message="THE PRICE OF THE CHAMPIONS PROGRAM WILL BE INCREASING SOON."
-          ctaText="join now"
-          ctaHref="#apply"
-        />
-        <main>
-          {children}
-        </main>
+      <body className="antialiased font-sans bg-black text-white">
+        <LenisProvider>
+          <div className="page-wrapper">
+            <UrgencyBanner 
+              message="THE PRICE OF THE CHAMPIONS PROGRAM WILL BE INCREASING SOON."
+              ctaText="JOIN NOW"
+              ctaHref="/checkout"
+            />
+            <main className="main-wrapper">
+              {children}
+            </main>
+          </div>
+        </LenisProvider>
       </body>
     </html>
   );

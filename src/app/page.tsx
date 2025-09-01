@@ -1,9 +1,18 @@
 import { Nav } from "@/components/blocks/Nav"
 import { Hero } from "@/components/blocks/Hero"
+import { Evolution } from "@/components/blocks/Evolution"
+import { CustomApplication } from "@/components/blocks/CustomApplication"
+import { RealWorldSystem } from "@/components/blocks/RealWorldSystem"
+import { Campuses } from "@/components/blocks/Campuses"
 import { Offers } from "@/components/blocks/Offers"
 import { ProofWall } from "@/components/blocks/ProofWall"
+import { TestimonialCarousel } from "@/components/blocks/TestimonialCarousel"
+import { Future } from "@/components/blocks/Future"
+import { YouMustBecomeChampion } from "@/components/blocks/YouMustBecomeChampion"
 import { FAQ } from "@/components/blocks/FAQ"
 import { Apply } from "@/components/blocks/Apply"
+import { FinalWarning } from "@/components/blocks/FinalWarning"
+import { ThousandsOnPath } from "@/components/blocks/ThousandsOnPath"
 import { Footer } from "@/components/blocks/Footer"
 import { homeData } from "@/lib/data"
 
@@ -14,18 +23,23 @@ export default function HomePage() {
       
       <Hero data={homeData.hero} />
       
-      <Offers
-        variant="programs"
-        title="Proven Wealth-Building Programs"
-        subtitle="Learn from industry experts who have generated millions using these exact strategies"
-        programs={homeData.campuses}
+      <Evolution data={homeData.evolution} />
+      
+      <RealWorldSystem data={homeData.realWorldSystem} />
+      
+      <CustomApplication data={homeData.customApplication} />
+      
+      <Campuses data={homeData.campuses} />
+      
+      <TestimonialCarousel
+        testimonials={homeData.testimonials}
+        title="Ready to make money online?"
+        subtitle="What YOU WILL LEARN"
       />
       
-      <ProofWall
-        title="Real Results from Real Students"
-        subtitle="Join thousands who have transformed their financial future"
-        testimonials={homeData.testimonials}
-      />
+      <Future data={homeData.future} />
+      
+      <YouMustBecomeChampion data={homeData.youMustBecomeChampion} />
       
       <Offers
         variant="pricing"
@@ -37,6 +51,10 @@ export default function HomePage() {
       <FAQ items={homeData.faq} />
       
       <Apply />
+      
+      <FinalWarning data={homeData.finalWarning} />
+      
+      <ThousandsOnPath data={homeData.thousandsOnPath} />
       
       <Footer />
     </>
