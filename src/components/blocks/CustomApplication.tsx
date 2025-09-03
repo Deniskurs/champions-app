@@ -66,6 +66,7 @@ export function CustomApplication({ data }: { data: CustomApplicationData }) {
                     alt={feature.title}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
               </div>

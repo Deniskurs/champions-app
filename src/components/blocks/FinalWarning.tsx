@@ -79,7 +79,7 @@ export function FinalWarning({ data }: FinalWarningProps) {
                   <span className="text-white font-bold">only thing taught is how to make CASH.</span>
                 </p>
                 <p className="mt-4">
-                  You will want to give up, <span className="text-white font-bold">you will want to quit</span>, you will think it's hard and as you continue to force yourself through your two year commitment,{" "}
+                  You will want to give up, <span className="text-white font-bold">you will want to quit</span>, you will think it&apos;s hard and as you continue to force yourself through your two year commitment,{" "}
                   <span className="text-white font-bold">but with the CHAMPIONS program, you will win.</span>
                 </p>
               </div>

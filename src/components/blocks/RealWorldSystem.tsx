@@ -48,7 +48,7 @@ export function RealWorldSystem({ data }: { data: RealWorldSystemData }) {
           className="text-xl md:text-2xl text-cream/90 leading-relaxed mb-12 max-w-5xl mx-auto"
         >
           <p>
-            The world's most{" "}
+            The world&apos;s most{" "}
             <span className="text-gold font-semibold">advanced financial education platform</span>
             , which has changed hundreds of thousands of lives. Inside the app, you will learn how to make money from{" "}
             <span className="text-gold font-semibold">multi-millionaire mentors</span>{" "}

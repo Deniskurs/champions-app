@@ -53,7 +53,7 @@ export function ProofWall({ title, subtitle, testimonials }: ProofWallProps) {
                   <div className="flex items-center gap-4 mb-6">
                     <div className="relative">
                       <Image
-                        src={testimonial.avatar}
+                        src={testimonial.image || '/images/placeholder-avatar.jpg'}
                         alt={testimonial.name}
                         width={56}
                         height={56}
@@ -70,7 +70,7 @@ export function ProofWall({ title, subtitle, testimonials }: ProofWallProps) {
                           new revenue
                         </div>
                         <div className="income-highlight">
-                          {testimonial.income}
+                          {testimonial.revenue}
                         </div>
                       </div>
                     </div>

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -42,6 +42,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-work-sans)", "ui-sans-serif", "system-ui"],
         serif: ["var(--font-playfair)", "ui-serif", "Georgia"],
+        playfair: ["var(--font-playfair)", "ui-serif", "Georgia"],
       },
       fontSize: {
         "hero": ["clamp(52px, 8.5vw, 110px)", { lineHeight: "0.9", letterSpacing: "-0.03em" }],
@@ -83,5 +84,19 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }: any) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 } satisfies Config;
