@@ -6,6 +6,7 @@ export interface HeroData {
   primaryCta: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
   posterSrc?: string
+  videoSrc?: string
 }
 
 export interface FAQItem {
@@ -172,7 +173,8 @@ export const homeData = {
     sub: "If you have a fight in 3 days, you'd train very differently than if you had a fight in two years. Making money is exactly the same.",
     primaryCta: { label: "BECOME A CHAMPION", href: "#apply" },
     secondaryCta: { label: "See Success Stories", href: "#proof" },
-    posterSrc: "/images/hero-poster.svg"
+    posterSrc: "/images/hero-poster.svg",
+    videoSrc: "/videos/hero-video.mp4"  // Add your video file here
   } as HeroData,
 
   campuses: {

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Section } from "@/components/core/Section"
-import { CTA } from "@/components/core/CTA"
+import { ChampionsCTA } from "@/components/core/ChampionsCTA"
 import { Check, Star } from "lucide-react"
 import Image from "next/image"
 
@@ -136,16 +136,13 @@ export function Apply() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <CTA 
-                asChild 
-                className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-white px-12 py-6 text-lg md:text-xl font-bold rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg border-0 group relative overflow-hidden"
+              <ChampionsCTA 
+                href="#apply"
+                showWarning={true}
+                warningText="PRICE INCREASING SOON"
               >
-                <a href="#apply" className="relative z-10">
-                  <span className="block group-hover:animate-pulse">become a champion</span>
-                  <span className="block text-sm opacity-90 font-normal mt-1 group-hover:animate-pulse">become a champion</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </a>
-              </CTA>
+                become a champion
+              </ChampionsCTA>
             </motion.div>
           </div>
           

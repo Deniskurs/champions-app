@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Section } from "@/components/core/Section"
-import { CTA } from "@/components/core/CTA"
+import { ChampionsCTA } from "@/components/core/ChampionsCTA"
 import Image from "next/image"
 
 interface ThousandsOnPathProps {
@@ -130,22 +130,12 @@ export function ThousandsOnPath({ data }: ThousandsOnPathProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <CTA 
-              asChild 
-              className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-8 py-4 text-base md:text-lg font-bold rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg border-0 group relative overflow-hidden"
+            <ChampionsCTA 
+              href={cta.href}
+              variant="primary"
             >
-              <a href={cta.href} className="relative z-10 flex items-center gap-2">
-                <span>{cta.label}</span>
-                <svg 
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </CTA>
+              {cta.label}
+            </ChampionsCTA>
           </motion.div>
           
         </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Section } from "@/components/core/Section"
-import { CTA } from "@/components/core/CTA"
+import { ChampionsCTA } from "@/components/core/ChampionsCTA"
 import Image from "next/image"
 import { FinalWarningData } from "@/lib/data"
 
@@ -86,16 +86,12 @@ export function FinalWarning({ data }: FinalWarningProps) {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <CTA 
-                  asChild 
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black px-12 py-6 text-lg md:text-xl font-bold rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg border-0 group relative overflow-hidden"
+                <ChampionsCTA 
+                  href={cta.href}
+                  variant="primary"
                 >
-                  <a href={cta.href} className="relative z-10">
-                    <span className="block group-hover:animate-pulse">{cta.label}</span>
-                    <span className="block text-sm opacity-90 font-normal mt-1 group-hover:animate-pulse">{cta.label}</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </a>
-                </CTA>
+                  {cta.label}
+                </ChampionsCTA>
               </div>
             </div>
           </motion.div>

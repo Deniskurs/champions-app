@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Section } from "@/components/core/Section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CTA } from "@/components/core/CTA"
+import { ChampionsCTA } from "@/components/core/ChampionsCTA"
 import { CampusItem, PricingPlan } from "@/lib/data"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
@@ -77,16 +77,14 @@ export function Offers({ variant = "programs", title, subtitle, programs, pricin
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="relative inline-block">
-                <CTA 
-                  asChild 
-                  className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-white px-12 py-6 text-lg md:text-xl font-bold rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg border-0 group relative overflow-hidden"
+                <ChampionsCTA 
+                  href={pricing.cta.href}
+                  variant="primary"
+                  showWarning={true}
+                  warningText="SAVE $349.76"
                 >
-                  <a href={pricing.cta.href} className="relative z-10">
-                    <span className="block group-hover:animate-pulse">{pricing.cta.label}</span>
-                    <span className="block text-sm opacity-90 font-normal mt-1 group-hover:animate-pulse">{pricing.cta.label}</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </a>
-                </CTA>
+                  {pricing.cta.label}
+                </ChampionsCTA>
                 
                 {/* Side arrows/decorative elements */}
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 hidden lg:block">
@@ -174,9 +172,9 @@ export function Offers({ variant = "programs", title, subtitle, programs, pricin
               
               <CardContent>
                 <p className="text-muted mb-6">{program.description}</p>
-                <CTA variant="outline" className="w-full group-hover:bg-accent group-hover:text-white transition-colors">
+                <ChampionsCTA href="#" variant="outline" className="w-full">
                   Learn More
-                </CTA>
+                </ChampionsCTA>
               </CardContent>
             </Card>
           </motion.div>
